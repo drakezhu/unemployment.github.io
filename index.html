@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+    <link rel="stylesheet" href="css/mainStyle.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand">US Unemployment Rate Map</a>
+        <div class="chart-button-box-container">
+            <button type="button" class="btn btn-primary nav-right" data-toggle="modal" data-target="#exampleModal">
+                <div class="nav-counter" id="num_states" style="opacity: 0">0</div>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div class="page-container" style="">
+        <div class="left-page" style="height: 100%">
+            <!--Map part-->
+            <div class="map-container">
+                <svg id="main-map" class="map-body"></svg>
+            </div><!--detail part-->
+            <div  class="slider-container">
+<!--                <div class="row align-items-center">-->
+                    <div class="slider">
+                        <button class="slider-button slider-button-unpressed"></button>
+                        <div id="slider-step" class = "slider_step"></div>
+                    </div>
+<!--                </div>-->
+            </div>
+
+
+
+        </div>
+        <div class="right-page">
+            <div class="chart-container">
+                <div id="ranking_title" class = "chart_title"></div></br>
+                <div id = "ranking"></div>
+                <div id="chosen_county_title" class = "chart_title"></div>
+                <div id = "county_select"></div>
+            </div>
+        </div>
+    <div id="detail_info">
+    </div>
+</div>
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" id = "window">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comparation of Different County</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id = "line-chart" class="modal-body" width = 400 height = 400>
+                <div class="chart-lock"></div>
+                <div id="line-dashboard" class="chart-dashboard">
+                    <button type="button" class="btn legend-trash">
+
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<!-- <script src="js/d3.js"></script> -->
+<!--<script src="js/d3.v4.min.js"></script>-->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Mapping.js"></script>
+<script src="js/dataloading.js"></script>
+<script src="js/d3-simple-slider.min.js"></script>
+<script src="js/constructMap.js"></script>
+<script src="js/constructLineChart.js"></script>
+
+<script>
+
+
+</script>
